@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calculadora en JavaScript</title>
+  <!-- Agrega el enlace a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Calculadora en JavaScript</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="numerito1">Ingrese el primer número:</label>
+          <input type="text" class="form-control" id="numerito1">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="numerito2">Ingrese el segundo número:</label>
+          <input type="text" class="form-control" id="numerito2">
+        </div>
+      </div>
+    </div>
+   <div class="row">
+        <div class="col-md-6 mb-2">
+          <button class="btn btn-primary btn-block" id="sumita">Suma</button>
+        </div>
+        <div class="col-md-6 mb-2">
+          <button class="btn btn-secondary btn-block" id="restita">Resta</button>
+        </div>
+        <div class="col-md-6 mb-2">
+          <button class="btn btn-info btn-block" id="multiplicacioncita">Multiplicación</button>
+        </div>
+        <div class="col-md-6 mb-2">
+          <button class="btn btn-warning btn-block" id="divisioncita">División</button>
+        </div>
+      </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="numerito_final">El resultado es:</label>
+          <input type="text" class="form-control" id="numerito_final" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agrega el enlace a Bootstrap JS y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    var numero1_js = document.getElementById("numerito1");
+    var numero2_js = document.getElementById("numerito2");
+    var numero3_js = document.getElementById("numerito_final");
+    var sumita_js = document.getElementById("sumita");
+    var restita_js = document.getElementById("restita");
+    var multiplicacioncita_js = document.getElementById("multiplicacioncita");
+    var division_js = document.getElementById("divisioncita");
+
+    sumita_js.addEventListener("click", function(){
+      var n1 = numero1_js.value;
+      var n2 = numero2_js.value;
+      var resultado = parseInt(n1) + parseInt(n2);
+      numero3_js.value = resultado;
+    });
+
+    restita_js.addEventListener("click", function(){
+      var n1 = numero1_js.value;
+      var n2 = numero2_js.value;
+      var resultado = parseInt(n1) - parseInt(n2);
+      numero3_js.value = resultado;
+    });
+
+    multiplicacioncita_js.addEventListener("click", function(){
+      var n1 = numero1_js.value;
+      var n2 = numero2_js.value;
+      var resultado = parseInt(n1) * parseInt(n2);
+      numero3_js.value = resultado;
+    });
+
+    division_js.addEventListener("click", function(){
+      var n1 = numero1_js.value;
+      var n2 = numero2_js.value;
+      var resultado = parseInt(n1) / parseInt(n2);
+      numero3_js.value = resultado;
+    });
+  </script>
+</body>
+</html>
